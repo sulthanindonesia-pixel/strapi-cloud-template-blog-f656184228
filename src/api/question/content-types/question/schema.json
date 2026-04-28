@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "singularName": "question",
+    "pluralName": "questions",
+    "displayName": "Question"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "questionId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "questionText": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "optionA": {
+      "type": "string",
+      "required": true
+    },
+    "optionB": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "optionC": {
+      "type": "string",
+      "required": true
+    },
+    "optionD": {
+      "type": "string",
+      "required": true
+    },
+    "correctAnswer": {
+      "type": "enumeration",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
+    },
+    "difficulty": {
+      "type": "enumeration",
+      "default": "Medium",
+      "enum": [
+        "Easy",
+        "Medium",
+        "Hard"
+      ]
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "subject": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subject.subject"
+    },
+    "optionE": {
+      "type": "string",
+      "required": false
+    },
+    "imageUrl": {
+      "type": "string"
+    }
+  }
+}
