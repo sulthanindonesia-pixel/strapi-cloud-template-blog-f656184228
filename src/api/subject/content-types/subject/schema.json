@@ -24,7 +24,15 @@
       "type": "string"
     },
     "resultLabel": {
-      "type": "string"
+      "type": "enumeration",
+      "enum": [
+        "Biology",
+        "Chemistry",
+        "Physics",
+        "HS Math",
+        "JH Math",
+        "JH Science"
+      ]
     },
     "iconEmoji": {
       "type": "string"
